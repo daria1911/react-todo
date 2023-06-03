@@ -21,9 +21,7 @@ function App() {
       <>
         <h1>Todo List</h1>
         <ul>
-            {todoList.map( (item, idx) => {
-                return <li key={idx}>{item.title}</li>
-            })}
+            {todoList.map( (item) => <li key={item.id}>{item.title}</li>)}
         </ul>
       </>
 
