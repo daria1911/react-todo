@@ -5,7 +5,7 @@ import AddTodoForm from "./AddTodoForm";
 const useSemiPersistentState = () => {
     const defaultValue = JSON.parse (localStorage.getItem("savedTodoList"))
 
-    const [value, setValue] = useState(defaultValue)
+    const [value, setValue] = useState(defaultValue || [])
 
     useEffect(()=> {
         let params = JSON.stringify(value)
