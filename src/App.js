@@ -9,17 +9,33 @@ function App() {
     const [todoList, setTodoList] = useState(     [])
     const [isLoading, setIsLoading] = React.useState(true);
 
+    const fetchData =  async () => {
+        let options = {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`
+            }
+        }
+        const url = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/${process.env.REACT_APP_TABLE_NAME}`
+        try {
+            const response = await fetch(url, options)
 
-    useEffect(()=> {
-        new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve({data: {todoList: defaultValue || []}});
-            }, 2000);
-        }).then(result => {
-            setTodoList(result.data.todoList)
-            setIsLoading(false)
-        })
-    }, [])
+
+            if (!response.ok) {
+                const message = `Error: ${response.status}`;
+                throw new Error(message);
+            }
+
+            let data = await response.json()
+
+        } catch (error) {
+            console.error('An error occurred:', error.message);
+        }
+    }
+
+    useEffect(() => {
+        fetchData()
+    }, [] )
 
     useEffect(() => {
         if(!isLoading){
