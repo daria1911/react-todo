@@ -20,14 +20,20 @@ function App() {
         try {
             const response = await fetch(url, options)
 
-
             if (!response.ok) {
                 const message = `Error: ${response.status}`;
                 throw new Error(message);
             }
 
             let data = await response.json()
-
+            let todos = data.records.map(record => {
+                return {
+                    "title": record.fields.title,
+                    "id": record.id
+                }
+            })
+            setTodoList(todos)
+            setIsLoading(false)
         } catch (error) {
             console.error('An error occurred:', error.message);
         }
