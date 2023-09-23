@@ -20,7 +20,7 @@ const AddTodoForm = ({addTodo}) => {
     return (
         <>
             <form onSubmit={handleAddTodo}>
-                <InputWithLabel title={todoTitle} handleTitle={setTodoTitle}>Title</InputWithLabel>
+                <InputWithLabel title={todoTitle} handleTitle={setTodoTitle}></InputWithLabel>
             </form>
         </>
 

@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from "react";
+import styles from './InputWithLabel.module.css';
 
-const InputWithLabel = ({title, handleTitle, children}) => {
+const InputWithLabel = ({title, handleTitle}) => {
 
     const inputRef = useRef(null);
 
@@ -15,14 +16,15 @@ const InputWithLabel = ({title, handleTitle, children}) => {
     }
 
     return (
-        <>
-            <label htmlFor="todoTitle">{children}: </label>
+        <div className={styles.mainInput}>
+            {/*<label htmlFor="todoTitle">{children}</label>*/}
             <input name="title" type="text" id="todoTitle"
                    value={title}
                    ref={inputRef}
+                   placeholder={"Add New Todo"}
                    onChange={handleTitleChange}/>
-            <button type="submit">Add</button>
-        </>
+            <button className={styles.addButton} type="submit">Add Todo</button>
+        </div>
     )
 }
 
