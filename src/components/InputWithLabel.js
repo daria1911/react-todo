@@ -1,5 +1,7 @@
 import React, {useEffect, useRef} from "react";
 import styles from './InputWithLabel.module.css';
+import PropTypes from "prop-types";
+import AddTodoForm from "./AddTodoForm";
 
 const InputWithLabel = ({title, handleTitle}) => {
 
@@ -29,3 +31,8 @@ const InputWithLabel = ({title, handleTitle}) => {
 }
 
 export default InputWithLabel
+
+InputWithLabel.propTypes = {
+    title: PropTypes.string,
+    handleTitle: PropTypes.func
+}

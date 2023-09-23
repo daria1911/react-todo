@@ -1,7 +1,8 @@
 import React, {useEffect, useRef, useState} from "react";
-import TodoList from "./TodoList";
-import AddTodoForm from "./AddTodoForm";
+
 import styles from './Home.module.css';
+import AddTodoForm from "./components/AddTodoForm";
+import TodoList from "./components/TodoList";
 
 
 const Home = () => {

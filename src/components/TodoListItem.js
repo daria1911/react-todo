@@ -1,5 +1,7 @@
 import React from "react";
 import styles from './TodoListItem.module.css';
+import PropTypes from "prop-types";
+import InputWithLabel from "./InputWithLabel";
 
 const TodoListItem = ({todo, onRemoveTodo}) => {
     const handleRemoveItem = () => {
@@ -19,3 +21,8 @@ const TodoListItem = ({todo, onRemoveTodo}) => {
 }
 
 export default TodoListItem
+
+TodoListItem.propTypes = {
+    todo: PropTypes.object,
+    onRemoveTodo: PropTypes.func
+}
