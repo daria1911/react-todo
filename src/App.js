@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./Home";
-import styles from './Home.module.css';
+import Lists from "./Lists";
 
 function App() {
 
@@ -10,7 +10,8 @@ function App() {
         <BrowserRouter>
            <Routes>
                <Route path="/" element={<Home/>}> </Route>
-               <Route path="/new" element= {<h1>todo</h1>}></Route>
+               <Route path="/profile" element= {<h1>Profile</h1>}></Route>
+               <Route path="/lists" element= {<Lists/>}></Route>
            </Routes>
       </BrowserRouter>
   );

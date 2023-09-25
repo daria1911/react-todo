@@ -4,13 +4,14 @@
     height: 50px;
     display: inline-flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 input{
     width: 78%;
     height: 70%;
     padding: 25px;
-    font-size: 15px;
+    font-size: 19px;
     border-width: 0px;
     border-color: #CCCCCC;
     background-color: #FFFFFF;
