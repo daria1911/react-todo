@@ -9,7 +9,6 @@ const AddTodoForm = ({addTodo}) => {
         event.preventDefault();
 
         let newTodoItem = {
-            id: Date.now(),
             title: todoTitle
         }
         addTodo(newTodoItem)
@@ -30,5 +29,6 @@ const AddTodoForm = ({addTodo}) => {
 export default AddTodoForm
 
 AddTodoForm.propTypes = {
+    onAddTodo: PropTypes.func,
     addTodo: PropTypes.func
 }

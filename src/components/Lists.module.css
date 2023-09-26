@@ -1,0 +1,57 @@
+ul {
+    display: flex;
+}
+.mainList {
+    width: 300px;
+    height: 150px;
+    border: 1px solid grey;
+    font-size: 25px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin: 0 20px;
+    justify-content: center;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 35px 5px 34px -9px rgba(0,0,0,0);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 35px 5px 34px -9px rgba(0,0,0,0);
+    background-color: #e2eab6;
+
+}
+
+.addList{
+    width: 300px;
+    height: 150px;
+    border: 1px solid grey;
+    font-size: 25px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin: 0 20px;
+    justify-content: center;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 35px 5px 34px -9px rgba(0,0,0,0);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 35px 5px 34px -9px rgba(0,0,0,0);
+    background-color:  #efe9e9;
+}
+
+.addListBtn {
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    background-color:#ededed;
+    border-radius:6px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    color:#777777;
+    font-family:Arial;
+    font-size:20px;
+    font-weight:bold;
+    padding:10px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+}
+.addListBtn:hover {
+    background-color:#5cbf2a;
+}
+.addListBtn:active {
+    position:relative;
+    top:1px;
+}

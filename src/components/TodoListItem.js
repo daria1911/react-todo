@@ -1,7 +1,6 @@
 import React from "react";
 import styles from './TodoListItem.module.css';
 import PropTypes from "prop-types";
-import InputWithLabel from "./InputWithLabel";
 
 const TodoListItem = ({todo, onRemoveTodo}) => {
     const handleRemoveItem = () => {
@@ -11,7 +10,10 @@ const TodoListItem = ({todo, onRemoveTodo}) => {
 
     return (
         <li className={styles.item}>
-            <span>{todo.title}</span>
+            <div>
+                <p>{todo.title}</p>
+                <p className={styles.date}>{todo.created}</p>
+            </div>
             <button className={styles.remove_btn} onClick={handleRemoveItem}>
                 remove
             </button>
