@@ -1,6 +1,9 @@
 import React, {useEffect, useRef, useState} from "react";
-import TodoList from "./TodoList";
-import AddTodoForm from "./AddTodoForm";
+
+import styles from './Home.module.css';
+import AddTodoForm from "./components/AddTodoForm";
+import TodoList from "./components/TodoList";
+
 
 const Home = () => {
 
@@ -58,12 +61,12 @@ const Home = () => {
 
 
     return (
-        <>
-            <h1>Todo List</h1>
+        <div className={styles.mainContainer}>
+            <h1>Todos App</h1>
             <AddTodoForm addTodo = {(newTodo)=> setTodoList([...todoList, newTodo])} />
                 {isLoading ? <p>Loading...</p> : null}
             <TodoList todoList={todoList} onRemoveTodo={removeTodo}/>
-        </>
+        </div>
      )
 }
 
